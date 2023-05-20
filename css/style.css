@@ -1,0 +1,82 @@
+@charset "UTF-8";
+
+body{
+    font-size:16px;
+    line-height: 1.5;
+    color:#424242;    
+    font-family: 'Roboto', "Hiragino Kaku Gothic ProN", "Hiragino Kaku Gothic Pro", "游ゴシック", YuGothic,'Meiryo UI',Meiryo,"ＭＳ ゴシック",Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
+
+.wrapper{
+    padding: 48px 0;
+}
+
+
+h1{
+    font-size: 32px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.btn{
+    appearance: none;
+    -webkit-appearance: none;
+    /* 中央よせにするため、blockにする */
+    display:block;
+    width: 180px;
+    margin: 20px auto;
+    padding: 10px;
+    border: none;
+    border-radius:4px;
+    background-color: #ea5254;
+    color: #fff;
+    font-size: 16px;
+}
+
+/* 初期設定　表示しない */
+.overlay{
+    display:none; /* display:noneで初期設定が表示されない */
+    /* position: fixed;: このプロパティは要素を固定位置に配置します。
+    固定位置とは、画面上の特定の場所に要素を配置し、スクロールしてもその位置を維持することを意味します。 */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* .overlayに、showクラスが追加された時 */
+/* display部分のみが変更 設定が見えるようになる　*/
+.overlay.show{
+    display:block;
+}
+
+/* 初期設定 */
+#result{
+/* opacity:0 要素は完全に透明(見えないようになっている)。 */
+    opacity: 0;
+    /* position: absolute;: このプロパティは要素を絶対位置に配置します。
+    絶対位置とは、要素が親要素や他の要素に対して相対的ではなく、
+    ページ上の指定された位置に配置されることを意味します。親要素や他の要素と重なることもあります。 */
+    position: absolute;
+/* 最初は隠れている状態になる */
+    top: -100%;
+    left: 50%;
+/* 与えられた要素を回転、拡大縮小、傾斜、移動することできます */
+    transform:translate3d(-50%,-50%,0);
+    width: 300px;
+/* transition CSS 通常時につけておく
+プロパティが変化する際のアニメーションの速度を操作する手段を提供 */
+    transition:all 5s ease-in;
+}
+
+/* #resultに、fadeクラスが追加された時 */
+#result.fade{
+    top: 50%;
+    /* opacity:1 要素は完全に不透明 */
+    opacity:1
+}
+
+

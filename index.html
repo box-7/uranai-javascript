@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>占いアプリ</title>
+<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+<link rel="stylesheet" href="css/reset.css">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="wrapper">
+    <h1>占いアプリ</h1>
+
+    <!-- startで、jsを呼ぶ -->
+    <button id="start" class="btn">占ってみる</button>
+  </div>
+<!-- id,classが同じ名前"overlay"であることは問題ない -->
+  <div id="overlay" class="overlay"><!-- divでimgを囲うと動かなくなる　→　動く -->
+<!-- id="result" / .classList.add("fade"); -->
+    <img src="images/daikichi.svg" alt="" id="result">
+  </div>
+  <script src="js/script.js"></script> <!-- JavaScript読み込み -->
+</body>
+</html>
+
+
